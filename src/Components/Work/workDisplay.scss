@@ -1,0 +1,199 @@
+.workDisplay-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  .workDisplay-overlay-container {
+    width: calc(100% - 6%);
+    height: 100%;
+    margin-left: 6%;
+
+    .overlay {
+      height: 0;
+      width: 94%;
+      position: relative;
+      background-color: #1a1919;
+      overflow: hidden;
+      .overlay-title {
+        position: absolute;
+        width: 100%;
+        color: rgb(236, 231, 225);
+        bottom: 25%;
+        .overlay-title-wraper {
+          color: rgb(236, 231, 225);
+          h1 {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 15vh;
+            transform: translateY(25rem);
+          }
+        }
+      }
+    }
+  }
+  .work-description {
+    width: calc(100% - 6%);
+    // margin-left: 6%;
+    display: flex;
+    flex-direction: column;
+    .description {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 2vw;
+      margin-left: 14%;
+      font-weight: 350;
+    }
+    .task-wrapper {
+      margin: 0 auto;
+      // margin-left: 14%;
+      width: 80%;
+      display: flex;
+      margin-left: 15%;
+      .task-content-wrapper {
+        flex: 1;
+        .task-header {
+          font-weight: 600;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          text-align: center;
+          font-size: 2vw;
+          &:after {
+            content: "";
+            display: block;
+            width: 3rem;
+            height: 0.5px;
+            color: black;
+            background: black;
+            margin: 0 auto;
+          }
+        }
+        .task {
+          height: 10vh;
+          width: 100%;
+          font-family: "Montserrat", sans-serif;
+          font-size: 1rem;
+          line-height: 1.9em;
+          font-weight: 400;
+          text-align: center;
+          margin: 0 auto;
+          margin-top: 0.5rem;
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+        &:nth-child(2) {
+          &.task-content-wrapper {
+            .task-header {
+              &:after {
+                content: "";
+                display: block;
+                width: 10rem;
+                height: 0.5px;
+                color: black;
+                background: black;
+                margin: 0 auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 950px) {
+  .workDisplay-container {
+    .workDisplay-overlay-container {
+      height: 90%;
+      .overlay {
+        .overlay-title {
+          h1 {
+            font-size: 14vw;
+          }
+        }
+      }
+    }
+    .work-description {
+      .description {
+        margin: 0;
+        margin-left: 10%;
+        text-align: justify;
+        font-size: 3vw;
+        font-weight: 375;
+        letter-spacing: 1px;
+        width: 90%;
+      }
+      .task-wrapper {
+        flex-direction: column;
+        margin-left: 10%;
+        .task-content-wrapper {
+          .task-header {
+            text-align: left;
+            font-size: 1rem;
+            &:after {
+              content: "";
+              display: block;
+              width: 3rem;
+              height: 0.5px;
+              color: black;
+              background: black;
+              margin: 0;
+            }
+          }
+          &:nth-child(2) {
+            &.task-content-wrapper {
+              .task-header {
+                &:after {
+                  content: "";
+                  display: block;
+                  width: 10rem;
+                  height: 0.5px;
+                  color: black;
+                  background: black;
+                  margin: 0;
+                }
+              }
+            }
+          }
+          .task {
+            height: max-content;
+            // padding-top: 0.5rem;
+            font-size: 14px;
+            text-align: left;
+          }
+          &:last-child {
+            .task {
+              padding-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 470px) {
+  .workDisplay-container {
+    .work-description {
+      .description {
+        font-size: 5vw;
+        font-weight: 350;
+      }
+      .task-wrapper {
+        flex-direction: column;
+        .task-content-wrapper {
+          margin-top: 0.5rem;
+          .task-header {
+            font-size: 1rem;
+          }
+          .task {
+            // padding-top: 0.5rem;
+            font-size: 4vw;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

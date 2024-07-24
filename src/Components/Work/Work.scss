@@ -1,0 +1,221 @@
+:root {
+  --workBgColor: #1a1919;
+}
+.work {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  color: rgb(236,231,225);
+  position: relative;
+  background: var(--workBgColor);
+  .work-overlay {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    top:0%;
+    background: rgb(236,231,225);
+    z-index: 2;
+  }
+  .work-wrapper {
+    width: calc(100vw - 6%);
+    height: 100%;
+    margin-left: 6%;
+    overflow-x: hidden;
+    .section-left {
+      height: 100%;
+      width: 30%;
+      position: fixed;
+      display: flex;
+      padding-top: 10%;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 3rem;
+      .header-mask {
+        margin-bottom: 1rem;
+        overflow: hidden;
+        .header-mask-para {
+          margin: 0;
+          font-family: "Montserrat", sans-serif;
+          font-size: 2.5vw;
+          font-weight: 500;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          transform: translateY(2.5rem);
+        }
+      }
+      .description-mask {
+        overflow: hidden;
+        .description-mask-para {
+          max-width: 90%;
+          margin: 0px;
+          margin-bottom: 1rem;
+          font-family: "Montserrat", sans-serif;
+          font-size: 12px;
+          line-height: 1.9em;
+          font-weight: 400;
+          transform: translateY(8rem);
+        }
+      }
+    }
+    .section-right {
+      width: 85%;
+      left: auto;
+      right: 0%;
+      margin-left: 25%;
+      margin-right: 0px;
+      padding-top: 8%;
+      .work-list-item {
+        margin-left: 10rem;
+        filter: blur(10px);
+        opacity: 0;
+        a {
+          text-decoration: none;
+          color: rgb(236,231,225);
+        }
+        .work-list-header {
+          margin-top: 0;
+          margin-bottom: 0;
+          font-size: 5vw;
+          transition: 0.1s;
+          text-transform: uppercase;
+          &:hover {
+            transform: translateX(1rem) skew(-10deg);
+          }
+        }
+        .work-list-para {
+          width: 85%;
+          margin: 0;
+          font-size: 8px;
+          padding-left: 0.5rem;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          font-weight: 50;
+        }
+
+        &:last-child{
+          .work-list-para{
+            // background: #fff;
+            padding-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 950px) {
+  .work {
+    .work-overlay {
+    }
+    .work-wrapper {
+      overflow: visible;
+      .section-left {
+        position: static;
+        display: block;
+        height: max-content;
+        width: 70%;
+        margin-left: 10%;
+        .header-mask {
+          .header-mask-para {
+            font-size: 3.5vw;
+            transform: translateY(2rem);
+          }
+        }
+        .description-mask {
+          .description-mask-para {
+            font-size: 1.5vw;
+          }
+        }
+      }
+      .section-right {
+        margin-left: 10%;
+        .work-list-item {
+          margin-left: 0;
+          a {
+          }
+          .work-list-header {
+            font-size: 7vw;
+            &:hover {
+            }
+          }
+          .work-list-para {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 760px) {
+  .work {
+    .work-overlay {
+    }
+    .work-wrapper {
+      overflow: visible;
+      .section-left {
+        position: static;
+        display: block;
+        height: max-content;
+        width: 70%;
+        margin-left: 10%;
+        .header-mask {
+          .header-mask-para {
+            font-size: 3.5vw;
+            transform: translateY(2rem);
+          }
+        }
+        .description-mask {
+          .description-mask-para {
+            font-size: 2vw;
+          }
+        }
+      }
+      .section-right {
+        margin-left: 10%;
+        .work-list-item {
+          margin-left: 0;
+          a {
+          }
+          .work-list-header {
+            font-size: 7vw;
+            &:hover {
+            }
+          }
+          .work-list-para {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 470px) {
+  .work {
+    .work-overlay {
+    }
+    .work-wrapper {
+      overflow: visible;
+      .section-left {
+        position: static;
+        display: block;
+        height: max-content;
+        width: 70%;
+        margin-left: 10%;
+        .header-mask {
+          .header-mask-para {
+            font-size: 4.5vw;
+            transform: translateY(2rem);
+          }
+        }
+        .description-mask {
+          .description-mask-para {
+            font-size: 3.5vw;
+          }
+        }
+      }
+    }
+}
+}

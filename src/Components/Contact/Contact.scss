@@ -1,0 +1,124 @@
+:root {
+  --primaryBgColor: rgb(236, 231, 225);
+}
+.contact {
+  width: 100%;
+  height: 100vh;
+  background: #1a1919;
+  // background-color: black;
+  .contact-overlay {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: var(--primaryBgColor);
+    // background-color: #fff;
+    z-index: 2;
+  }
+  .contact-wrapper {
+    height: 100%;
+    display: flex;
+    .section-left {
+      height: 100%;
+      margin-left: 6%;
+      padding-left: 5%;
+      //   padding-top: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // flex: 1;
+      .header-mask {
+        overflow: hidden;
+        .header {
+          color: var(--primaryBgColor);
+          margin: 0;
+          font-size: 10vw;
+          transform: translateY(9.4rem);
+        }
+      }
+      .description-mask {
+        overflow: hidden;
+        width: 100%;
+        p {
+          color: var(--primaryBgColor);
+          margin: 0;
+          margin-left: 5px;
+          margin-top: 5%;
+          width: 80%;
+          font-size: 12px;
+          transform: translateY(4.4rem);
+          font-family: "Montserrat", sans-serif;
+          letter-spacing: 1px;
+
+          a {
+            color: var(--primaryBgColor);
+            text-decoration: none;
+            border-bottom: 1px solid var(--primaryBgColor);
+          }
+        }
+        .contact-link {
+          height: 2rem;
+          &:nth-child(1) {
+            margin-top: 3%;
+          }
+          &:nth-child(2) {
+            margin-top: 1%;
+          }
+        }
+      }
+    }
+    .section-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 5%;
+      flex: 1;
+      align-items: center;
+
+      .contact-form {
+        width: 100%;
+        height: 50%;
+        position: relative;
+        background-color: var(--primaryBgColor);
+        .mail-overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 0;
+          background-color: #1a1919;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 760px) {
+  .contact {
+    .contact-wrapper {
+      height: 90%;
+      flex-direction: column;
+      .section-left {
+        .header-mask {
+          .header {
+            margin-left: 5px;
+          }
+        }
+        .description-mask {
+          width: 100%;
+          p {
+            width: 90%;
+          }
+          .contact-link {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}

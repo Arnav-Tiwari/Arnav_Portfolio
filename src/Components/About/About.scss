@@ -1,0 +1,199 @@
+:root {
+  // --fontFamily:'La Belle Aurore',cursive;;
+  --fontFamily: "Indie Flower", cursive;
+  --fontFamily2: "Montserrat", sans-serif;
+}
+.about {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  .about-overlay {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    bottom: 0%;
+    background-color: #000;
+  }
+  .about-wrapper {
+    width: 55%;
+    margin-left: 6%;
+    padding-left: 10%;
+    padding-right: 5%;
+    .section-left {
+      position: relative;
+      width: 100%;
+      padding-top: 5%;
+      padding-bottom: 12%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .header-mask {
+        text-align: left;
+        position: relative;
+        // margin-bottom: 5vh;
+        width: 100%;
+        overflow: hidden;
+        .header {
+          font-size: 13vw;
+          font-weight: 500;
+          margin: 0;
+          display: block;
+          text-align: left;
+          font-family: var(--fontFamily2);
+          transform: translateY(12rem);
+        }
+      }
+      .description-mask {
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-align: justify;
+        p {
+          margin: 0;
+          font-size: 1rem;
+          font-weight: 370;
+          .work-status {
+            font-weight: 495;
+            font-style: italic;
+            border-bottom: 1.5px solid black;
+          }
+        }
+        .exp {
+          font-weight: 490;
+          letter-spacing: 2px;
+          .duration {
+            border: none;
+            font-style: italic;
+            font-size: 0.8rem;
+          }
+        }
+        .title {
+          padding-bottom: 2%;
+          margin: 0;
+          margin-top: 2rem;
+          // font-family: "Montserrat", sans-serif;
+          font-family: var(--fontFamily2);
+          font-size: 2.2rem;
+          font-weight: 400;
+          line-height: 2.7rem;
+        }
+
+        .header {
+          position: relative;
+          margin-top: 0px;
+          margin-bottom: 0vh;
+          font-family: var(--fontFamily2);
+          font-size: 2vw;
+          line-height: 1.75em;
+          font-weight: 500;
+          text-align: left;
+          letter-spacing: 4px;
+          text-transform: uppercase;
+        }
+        .makebold {
+          font-weight: 500;
+          border: none;
+        }
+      }
+      .work-button-container {
+        width: 100%;
+        margin-top: 1rem;
+        .work-button {
+          padding: 1rem 1.5em;
+          border-radius: 50px;
+          background-color: #1a1818;
+          font-family: "Montserrat", sans-serif;
+          color: #ece7e1;
+          font-size: 24px;
+          font-weight: 400;
+          letter-spacing: 1px;
+          text-decoration: none;
+          text-align: center;
+          transition: 0.2s;
+          &:hover {
+            padding: 1rem 4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 760px) {
+  .about {
+    .about-overlay {
+    }
+    .about-wrapper {
+      width: 80%;
+      margin-left: 0;
+      .section-left {
+        .header-mask {
+          .header {
+          }
+        }
+        .description-mask {
+          width: 100%;
+          p {
+            font-size: 3vw;
+          }
+          .title {
+            font-size: 5vw;
+            line-height: 2rem;
+          }
+
+          .header {
+            font-size: 4vw;
+          }
+        }
+        .work-button-container {
+          .work-button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            &:hover {
+              padding: 1rem 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 470px) {
+  .about {
+    .about-overlay {
+    }
+    .about-wrapper {
+      width: 80%;
+      .section-left {
+        .header-mask {
+          .header {
+          }
+        }
+        .description-mask {
+          width: 100%;
+          p {
+            font-size: 4vw;
+          }
+          .title {
+            font-size: 6vw;
+            line-height: 2rem;
+          }
+
+          .header {
+            font-size: 6vw;
+          }
+        }
+        .work-button-container {
+          .work-button {
+            padding: 0.5rem 1rem;
+            font-size: 12px;
+            &:hover {
+              padding: 0.5rem 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

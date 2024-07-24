@@ -1,0 +1,190 @@
+// @import "../Breakpoint/breakpoints.scss";
+:root {
+  // --fontFamily:'La Belle Aurore',cursive;;
+  --fontFamily: "Indie Flower", cursive;
+  --fontFamily2: "Montserrat", sans-serif;
+}
+.home {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  .overlay {
+    position: absolute;
+    // width: 100vw;
+    // height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1a1919
+  }
+  .home-wrapper {
+    position: relative;
+    max-width: 90%;
+    height: 100%;
+    // margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 5%;
+    padding-left: 10%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    .section-left {
+      //   position: fixed;
+      display: flex;
+      width: 30%;
+      height: 100vh;
+      padding-top: 10%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      .content {
+        .header-mask {
+          overflow: hidden;
+          color: #1a1919;
+          .header {
+            // font-family: sans-serif;
+            width: 100%;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.3vw;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transform: translateY(3rem);
+            color: #1a1919;
+          }
+        }
+        .description-mask {
+          position: relative;
+          max-width: 100%;
+          margin-right: 0px;
+          margin-left: 0px;
+          overflow: hidden;
+          color: #1a1919;
+          //   font-family: sans-serif;
+          font-family: "Montserrat", sans-serif;
+          font-size: 12px;
+          line-height: 1.9em;
+          font-weight: 400;
+          .d-mask {
+            transform: translateY(5.5rem);
+            letter-spacing: 0.5px;
+            margin-bottom: 0px;
+            font-weight: 410;
+          }
+        }
+      }
+    }
+    .section-right {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .home-nav {
+        padding-left: 6%;
+        .home-nav-item {
+          margin-top: -2rem;
+          transition: transform 0.1s;
+          .nav-link {
+            font-size: 12vw;
+            color: #1a1919;
+            font-weight: 900;
+            font-family: var(--fontFamily2);
+
+            filter: blur(20px);
+            text-decoration: none;
+          }
+          &:hover {
+            transform: translateX(1rem) skew(-10deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 950px) {
+  body {
+    overflow-y: visible;
+  }
+  .home {
+    .home-wrapper {
+      display: block;
+      overflow-y: auto;
+      position: relative;
+      .section-left {
+        width: 100%;
+        height: 40vh;
+        padding-top: 10%;
+        padding-left: 6%;
+        .content {
+          .header-mask {
+            .header {
+              font-size: 2.5vw;
+            }
+          }
+          .description-mask {
+            p {
+              font-size: 1.5vw;
+            }
+          }
+        }
+      }
+      .section-right {
+        display: block;
+        .home-nav {
+          .home-nav-item {
+            .nav-link {
+              font-size: 13vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 759px) {
+  body {
+    overflow-y: visible;
+  }
+  .home {
+    .home-wrapper {
+      display: block;
+      overflow-y: auto;
+      position: relative;
+      .section-left {
+        width: 100%;
+        height: 40vh;
+        padding-top: 10%;
+        padding-left: 0%;
+        .content {
+          .header-mask {
+            .header {
+              font-size: 3vh;
+            }
+          }
+          .description-mask {
+            p {
+              font-size: 2vh;
+            }
+          }
+        }
+      }
+      .section-right {
+        display: block;
+        .home-nav {
+          padding: 0;
+          .home-nav-item {
+            margin: 1rem;
+            margin-left: 0rem;
+            .nav-link {
+              font-size: 10vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

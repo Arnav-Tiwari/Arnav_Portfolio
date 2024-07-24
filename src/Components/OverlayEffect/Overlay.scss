@@ -1,0 +1,14 @@
+.overlay-wrapper {
+  position: relative;
+  .overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1919;
+    // display: none;
+  }
+  .content {
+    position: absolute;
+    filter: blur(4px);
+  }
+}

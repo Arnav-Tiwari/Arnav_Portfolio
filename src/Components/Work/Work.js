@@ -59,7 +59,7 @@ const Work = () => {
           </div>
           <div className="description-mask">
             <p className="description-mask-para">
-            I have also honed my problem-solving abilities on platforms like LeetCode and HackerRank, enhancing my proficiency in data structures and algorithms.
+            I have also honed my problem-solving abilities on platforms like <a href="https://leetcode.com/u/Arnav_Tiwari/">LeetCode</a> , <a href="https://codeforces.com/profile/_revenant">Codeforces</a> and <a href="https://www.hackerrank.com/profile/arnavtiwari100">HackerRank</a>, enhancing my proficiency in data structures and algorithms.
             </p>
           </div>
         </div>

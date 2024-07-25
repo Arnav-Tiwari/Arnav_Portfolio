@@ -45,7 +45,7 @@ const About = () => {
               system from a Java{" "}
               <span className="makebold">EJB architecture</span> to a modern{" "}
               <span className="makebold">
-                Spring Boot microservices framework
+                Spring Boot microservices framework @Newgen Software
               </span>
               , leveraging my expertise in the field. I optimized database
               procedures across{" "}
@@ -162,7 +162,7 @@ const About = () => {
             <p className="skills">
               React / Spring Boot / Core Java / Javascript / Thymeleaf / Data
               Structures / Algorithms <br /> / Problem Solving/ MongoDB / SQL /
-              SASS / CSS / HTML5/ Spring DATA JPA /Spring Security <br />/
+              SASS / CSS / HTML5/ Spring DATA JPA /Spring Security
               Spring Web / Postgres SQL / Oracle SQL.
             </p>
             <br />
